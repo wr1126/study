@@ -1,7 +1,6 @@
 - <strong>Today</strong><br>
-
-  1. MDN 문서를 읽으며 블록깨기 게임을 따라 만들어보았다.
-     https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+  MDN 문서를 읽으며 블록깨기 게임을 따라 만들어보았다.
+  https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 
 - <strong>I Learn</strong><br>
   git에는 올려놓고 로컬 저장소에서는 이미 삭제한 폴더를 원격으로 지워야했다.
