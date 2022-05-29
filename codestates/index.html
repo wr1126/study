@@ -7,36 +7,60 @@
     <title>codeStates</title>
     <link rel="stylesheet" href="css/style.css" />
     <script async src="js/app.js"></script>
+    <script async src="js/mainSlider.js"></script>
   </head>
   <body>
     <section id="header">
-      <div id="menu">
-        <div id="logo"><img src="img/logo.png" alt="코드스테이츠 로고" /></div>
-        <ul>
-          <li><a href="#" class="lavender">About</a></li>
-          <li><a href="#" class="lavender">코스 탐색</a></li>
-          <li><a href="#" class="lavender">채용 파트너십</a></li>
-          <li><a href="#" class="lavender">기업교육</a></li>
-          <li><a href="#" class="lavender">블로그</a></li>
-          <li><a href="#" class="lavender">자주 묻는 질문</a></li>
-        </ul>
-      </div>
-      <div id="myPage">
-        <p class="lavender">마이페이지</p>
+      <div class="headerWrap">
+        <div id="menu">
+          <div id="logo">
+            <img src="img/logo.png" alt="코드스테이츠 로고" />
+          </div>
+          <ul>
+            <li id="about">
+              <a href="#" class="lavender">About</a>
+              <ul class="submenu">
+                <li><a href="#">졸업생 현황</a></li>
+                <li><a href="#">졸업생 커뮤니티</a></li>
+              </ul>
+            </li>
+            <li id="course">
+              <a href="#" class="lavender">코스 탐색</a>
+              <ul class="submenu">
+                <li><a href="#">프론트엔드 개발</a></li>
+                <li><a href="#">백엔드 개발</a></li>
+                <li><a href="#">프로덕트 매니지먼트</a></li>
+                <li><a href="#">그로스 마케팅</a></li>
+                <li><a href="#">인공 지능(AI)</a></li>
+                <li><a href="#">블록체인</a></li>
+                <li class="hr"><a href="#">데브옵스</a></li>
+                <li><a href="#">빗썸 테크 아카데미(FE & BE)</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="lavender">채용 파트너십</a></li>
+            <li><a href="#" class="lavender">기업교육</a></li>
+            <li><a href="#" class="lavender">블로그</a></li>
+            <li><a href="#" class="lavender">자주 묻는 질문</a></li>
+          </ul>
+        </div>
+        <div id="myPage">
+          <p class="lavender">마이페이지</p>
+        </div>
       </div>
     </section>
     <section id="mainSlider">
-      <div id="banner"></div>
-      <div id="pagination">
+      <ul id="bannerWrap"></ul>
+      <!--       <div id="pagination">
         <div id="pageNum"><span id="curr"></span>/<span id="total"></span></div>
         <div id="buttonWrap">
           <div id="left"><</div>
           <div id="right">></div>
           <div id="stop">
-            <!-- <img src="img/pause.png" alt="stop button" /> -->
+            <img src="img/pause.png" alt="stop button" />
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
+    <section id="temp" style="height: 300vh"></section>
   </body>
 </html>

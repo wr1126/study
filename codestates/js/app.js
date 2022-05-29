@@ -1,16 +1,8 @@
-const bannerContainer = document.getElementById("banner");
-let banners = [
-  "url(../img/banner01.png)",
-  "url(../img/banner02.png)",
-  "url(../img/banner03.png)",
-];
+const header = document.getElementById("header");
 
-function addBanner() {
-  for (let i = 0; i < banners.length; i++) {
-    const div = document.createElement("div");
-    div.style.backgroundImage = banners[i];
-    bannerContainer.appendChild(div);
-  }
-}
-
-addBanner();
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("header");
+  window.scrollY > 70
+    ? (header.style.boxShadow = "0px 5px 5px 0px rgba(200, 200, 200, 0.1)")
+    : (header.style.boxShadow = "none");
+});
