@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+#container {
+  position: relative;
+  width: 1200px;
+  height: 500px;
+  margin: 500px auto 0;
+  border: 5px solid #ccc;
+  overflow: hidden;
+}
+
+#slider {
+  position: absolute;
+  height: 100%;
+  background-color: yellow;
+}
+
+.slide {
+  float: left;
+  width: 500px;
+  height: 500px;
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=style.css.map */
