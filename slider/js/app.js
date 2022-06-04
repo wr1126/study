@@ -43,24 +43,17 @@ function setStartPos() {
 //4. 버튼 클릭 시 슬라이드를 움직임
 function moveSlide(e) {
   const posNum = parseInt(slider.style.left.slice(0, -2));
-  slider.classList.add("animated");
-  if (e.target.id === "next") {
-    currPos -= 620;
-    slider.style.left = currPos + "px";
-  } else {
-    currPos += 620;
-    slider.style.left = currPos + "px";
-  }
-  /* setTimeout(function () {
-    slider.classList.add("animated");
+  setTimeout(function () {
     if (e.target.id === "next") {
+      slider.classList.add("animated");
       currPos -= 620;
       slider.style.left = currPos + "px";
     } else {
+      slider.classList.add("animated");
       currPos += 620;
       slider.style.left = currPos + "px";
     }
-  }, 300); */
+  }, 200);
 
   posNum <= -5480 || posNum >= -520 ? returnSlide() : null;
   console.log(posNum);
@@ -68,11 +61,11 @@ function moveSlide(e) {
 
 //5. 슬라이드의 양끝에서 버튼을 누르면 left 위치를 원상태로 돌리기
 function returnSlide() {
-  //setTimeout(() => , 200);
-  slider.classList.remove("animated");
-  currPos = -3000;
-  slider.classList.add("animated");
-  slider.style.left = -3000 + "px";
+  setTimeout(function () {
+    slider.classList.remove("animated");
+    currPos = -3000;
+    setStartPos();
+  }, 400);
 }
 
 cloneSlides();
