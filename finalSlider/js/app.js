@@ -6,6 +6,7 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const pauseBtn = document.getElementById("pause");
 let pause = document.createElement("img");
+
 const initialPos = -8440;
 const slideWidth = 1220;
 let slidePos = 0;
