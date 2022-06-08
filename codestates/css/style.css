@@ -96,25 +96,84 @@ body {
   background-color: #f3f3f7;
 }
 
-#mainSlider {
+#sliderContainer {
   margin-top: 70px;
+  position: relative;
+  height: 383px;
 }
 
-#bannerWrap {
-  height: 536px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+#mainSlider {
   position: absolute;
-  /* left: -2200px; */
+  display: flex;
 }
-#bannerWrap .banner {
-  width: 2200px;
-  height: 100%;
-  margin-right: 20px;
+
+.slide {
+  width: 1100px;
+  height: 383px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+}
+.slide:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slide01 {
+  background-image: url(../img/banner01.png);
+}
+
+.slide02 {
+  background-image: url(../img/banner02.png);
+}
+
+.slide03 {
+  background-image: url(../img/banner03.png);
+}
+
+.slide04 {
+  background-image: url(../img/banner04.png);
+}
+
+.slide05 {
+  background-image: url(../img/banner05.png);
+}
+
+#controller {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+}
+#controller > div:not(:last-child) {
+  margin-right: 10px;
+}
+
+#numWrap {
+  color: white;
+  font-size: 12px;
+}
+#numWrap .currNum {
+  margin: 2px;
+}
+#numWrap .totalNum {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#btnWrap {
+  display: flex;
+}
+#btnWrap #prevBtn {
+  transform: rotateY(180deg);
+}
+#btnWrap > div {
+  cursor: pointer;
+  width: 14px;
+  margin-right: 8px;
+}
+#btnWrap > div img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
