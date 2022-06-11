@@ -1,7 +1,10 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+*:not(.currNum) {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #222222;
 }
 
 ul {
@@ -14,7 +17,7 @@ a {
 }
 
 body {
-  font-size: 14px;
+  position: relative;
 }
 
 #header {
@@ -23,6 +26,7 @@ body {
   top: 0;
   left: 0;
   background-color: white;
+  z-index: 100;
 }
 #header .headerWrap {
   width: 1200px;
@@ -34,6 +38,7 @@ body {
 
 #menu {
   display: flex;
+  font-size: 14px;
 }
 #menu #logo {
   width: 100px;
@@ -106,6 +111,21 @@ body {
   position: absolute;
   display: flex;
 }
+#mainSlider .slide01 {
+  background-image: url(../img/banner01.png);
+}
+#mainSlider .slide02 {
+  background-image: url(../img/banner02.png);
+}
+#mainSlider .slide03 {
+  background-image: url(../img/banner03.png);
+}
+#mainSlider .slide04 {
+  background-image: url(../img/banner04.png);
+}
+#mainSlider .slide05 {
+  background-image: url(../img/banner05.png);
+}
 
 .slide {
   width: 1100px;
@@ -116,26 +136,6 @@ body {
 }
 .slide:not(:last-child) {
   margin-right: 20px;
-}
-
-.slide01 {
-  background-image: url(../img/banner01.png);
-}
-
-.slide02 {
-  background-image: url(../img/banner02.png);
-}
-
-.slide03 {
-  background-image: url(../img/banner03.png);
-}
-
-.slide04 {
-  background-image: url(../img/banner04.png);
-}
-
-.slide05 {
-  background-image: url(../img/banner05.png);
 }
 
 #controller {
@@ -174,6 +174,250 @@ body {
 #btnWrap > div img {
   display: block;
   width: 100%;
+}
+
+#courseInfo {
+  padding: 100px 0;
+  box-sizing: border-box;
+  text-align: center;
+  letter-spacing: -0.025rem;
+}
+#courseInfo h2 {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+#courseInfo > p {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+#courseWrap {
+  max-width: 1650px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.course {
+  cursor: pointer;
+  width: 380px;
+  height: 300px;
+  padding: 40px 48px 54px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+.course:first-child {
+  background-color: #f2eafe;
+}
+.course:first-child .status {
+  color: #f2eafe;
+}
+.course:first-child .moreBtn {
+  color: #997acb;
+}
+.course:nth-child(2) {
+  background-color: #f8e8ff;
+}
+.course:nth-child(2) .status {
+  color: #f8e8ff;
+}
+.course:nth-child(2) .moreBtn {
+  color: #c38fd9;
+}
+.course:nth-child(3) {
+  background-color: #ecedfe;
+}
+.course:nth-child(3) .status {
+  color: #ecedfe;
+}
+.course:nth-child(3) .moreBtn {
+  color: #838de2;
+}
+.course:nth-child(4) {
+  background-color: #fef3ea;
+}
+.course:nth-child(4) .status {
+  color: #fef3ea;
+}
+.course:nth-child(4) .moreBtn {
+  color: #ecbd9e;
+}
+.course:nth-child(5) {
+  background-color: #e3e4ee;
+}
+.course:nth-child(5) .status {
+  color: #e3e4ee;
+}
+.course:nth-child(5) .moreBtn {
+  color: #9b9abb;
+}
+.course:nth-child(6) {
+  background-color: #e9fbf5;
+}
+.course:nth-child(6) .status {
+  color: #e9fbf5;
+}
+.course:nth-child(6) .moreBtn {
+  color: #9cb7af;
+}
+.course:last-child {
+  background-color: #eaf0f6;
+}
+.course:last-child .status {
+  color: #eaf0f6;
+}
+.course:last-child .moreBtn {
+  color: #a1bad2;
+}
+.course:hover {
+  background-color: #4000c7;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 20px;
+}
+.course:hover > * {
+  color: white;
+}
+.course:hover .status {
+  background-color: white;
+  color: #4000c7;
+}
+.course:hover .moreBtn {
+  color: white;
+}
+.course .status {
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 3px 12px;
+  margin-bottom: 20px;
+  background-color: #4000c7;
+}
+.course .yet {
+  background-color: black;
+}
+.course .courseName {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.course .content {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.course .moreBtn {
+  font-size: 16px;
+}
+
+#introduce {
+  padding: 100px 80px;
+  text-align: center;
+}
+#introduce p {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+#boxWrap {
+  max-width: 1650px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#boxWrap .box {
+  position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 364px;
+  padding: 30px;
+  border-radius: 20px;
+  transition: all 0.3s ease 0s;
+  /*     &::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+  } */
+}
+#boxWrap .box .plusBtn,
+#boxWrap .box .textWrap > * {
+  color: white;
+}
+#boxWrap .box:hover {
+  background-size: 110%;
+}
+#boxWrap .box:not(.box01) {
+  width: 542px;
+  margin-top: 16px;
+}
+#boxWrap .box01 {
+  background-image: url(../img/benefit01.png);
+  width: 1100px;
+}
+#boxWrap .box02 {
+  background-image: url(../img/benefit02.png);
+}
+#boxWrap .box03 {
+  background-image: url(../img/benefit03.png);
+}
+#boxWrap .box04 {
+  background-image: url(../img/benefit04.png);
+}
+#boxWrap .box05 {
+  background-image: url(../img/benefit05.png);
+}
+#boxWrap .plusBtn {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  font-size: 12px;
+  padding: 3px 12px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+#boxWrap .textWrap {
+  font-weight: bold;
+  text-align: left;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+#boxWrap .textWrap .num {
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+}
+#boxWrap .textWrap .introduce {
+  font-size: 22px;
+}
+#boxWrap .textHidden {
+  text-align: left;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  color: white;
+  font-size: 16px;
+}
+#boxWrap .textHidden .strong {
+  font-weight: 700;
+  color: white;
+}
+
+.gray {
+  background-color: #f5f5f5;
 }
 
 /*# sourceMappingURL=style.css.map */
