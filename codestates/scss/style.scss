@@ -107,6 +107,7 @@ body {
   margin-top: 70px;
   position: relative;
   height: 383px;
+  overflow: hidden;
 }
 #mainSlider {
   position: absolute;
@@ -408,73 +409,75 @@ body {
   margin: 50px auto 0;
   position: relative;
 }
-#reviewSlider {
+#reviewSliderContainer {
+  //실제로 보이는 부분, overflowHidden
   width: 1140px;
   height: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: left;
-
-  .slide {
+  overflow: hidden;
+  position: relative;
+  #reviewSlider {
+    //ul
     position: absolute;
-    z-index: 99;
-    width: 559px;
+    display: flex;
+    text-align: left;
     height: 100%;
-    border-radius: 20px;
-    padding: 40px;
-    background-color: #f6f2ff;
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    .profileWrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      p {
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: -0.55px;
-        line-height: 33px;
-        color: #3e06b6;
+    .slide {
+      width: 559px;
+      height: 100%;
+      border-radius: 20px;
+      padding: 40px;
+      background-color: #f6f2ff;
+      &:not(:last-child) {
+        margin-right: 20px;
       }
-      img {
-        width: 70px;
+      .profileWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.55px;
+          line-height: 33px;
+          color: #3e06b6;
+        }
+        img {
+          width: 70px;
+        }
       }
-    }
-    .name {
-      font-size: 14px;
-      margin: 10px 0 16px;
-      span {
-        font-weight: bold;
+      .name {
+        font-size: 14px;
+        margin: 10px 0 16px;
+        span {
+          font-weight: bold;
+        }
       }
-    }
-    .text {
-      display: block;
-      font-weight: 400;
-      font-size: 12px;
-      letter-spacing: -0.3px;
-      line-height: 18px;
-      color: #525252;
-      white-space: normal;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-
-    .tags {
-      margin-top: 20px;
-      display: flex;
-      li {
-        font-size: 10px;
-        background: white;
+      .text {
+        display: block;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: -0.3px;
+        line-height: 18px;
         color: #525252;
-        margin-right: 5px;
-        border-radius: 20px;
-        padding: 3px 10px;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .tags {
+        margin-top: 20px;
+        display: flex;
+        li {
+          font-size: 10px;
+          background: white;
+          color: #525252;
+          margin-right: 5px;
+          border-radius: 20px;
+          padding: 3px 10px;
+        }
       }
     }
   }

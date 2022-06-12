@@ -105,6 +105,7 @@ body {
   margin-top: 70px;
   position: relative;
   height: 383px;
+  overflow: hidden;
 }
 
 #mainSlider {
@@ -410,49 +411,52 @@ body {
   position: relative;
 }
 
-#reviewSlider {
+#reviewSliderContainer {
   width: 1140px;
   height: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: left;
+  overflow: hidden;
+  position: relative;
 }
-#reviewSlider .slide {
+#reviewSliderContainer #reviewSlider {
   position: absolute;
-  z-index: 99;
+  display: flex;
+  text-align: left;
+  height: 100%;
+}
+#reviewSliderContainer #reviewSlider .slide {
   width: 559px;
   height: 100%;
   border-radius: 20px;
   padding: 40px;
   background-color: #f6f2ff;
 }
-#reviewSlider .slide:not(:last-child) {
+#reviewSliderContainer #reviewSlider .slide:not(:last-child) {
   margin-right: 20px;
 }
-#reviewSlider .slide .profileWrap {
+#reviewSliderContainer #reviewSlider .slide .profileWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#reviewSlider .slide .profileWrap p {
+#reviewSliderContainer #reviewSlider .slide .profileWrap p {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.55px;
   line-height: 33px;
   color: #3e06b6;
 }
-#reviewSlider .slide .profileWrap img {
+#reviewSliderContainer #reviewSlider .slide .profileWrap img {
   width: 70px;
 }
-#reviewSlider .slide .name {
+#reviewSliderContainer #reviewSlider .slide .name {
   font-size: 14px;
   margin: 10px 0 16px;
 }
-#reviewSlider .slide .name span {
+#reviewSliderContainer #reviewSlider .slide .name span {
   font-weight: bold;
 }
-#reviewSlider .slide .text {
+#reviewSliderContainer #reviewSlider .slide .text {
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -466,11 +470,11 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-#reviewSlider .slide .tags {
+#reviewSliderContainer #reviewSlider .slide .tags {
   margin-top: 20px;
   display: flex;
 }
-#reviewSlider .slide .tags li {
+#reviewSliderContainer #reviewSlider .slide .tags li {
   font-size: 10px;
   background: white;
   color: #525252;
