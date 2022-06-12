@@ -111,6 +111,16 @@ body {
   position: absolute;
   display: flex;
 }
+#mainSlider .slide {
+  width: 1100px;
+  height: 383px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#mainSlider .slide:not(:last-child) {
+  margin-right: 20px;
+}
 #mainSlider .slide01 {
   background-image: url(../img/banner01.png);
 }
@@ -125,17 +135,6 @@ body {
 }
 #mainSlider .slide05 {
   background-image: url(../img/banner05.png);
-}
-
-.slide {
-  width: 1100px;
-  height: 383px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-.slide:not(:last-child) {
-  margin-right: 20px;
 }
 
 #controller {
@@ -182,12 +181,6 @@ body {
   text-align: center;
   letter-spacing: -0.025rem;
 }
-#courseInfo h2 {
-  font-size: 48px;
-  line-height: 72px;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
 #courseInfo > p {
   font-size: 22px;
   line-height: 33px;
@@ -195,6 +188,7 @@ body {
 
 #courseWrap {
   max-width: 1650px;
+  width: 820px;
   margin: 50px auto 0;
   display: flex;
   flex-wrap: wrap;
@@ -314,17 +308,15 @@ body {
 }
 
 #introduce {
-  padding: 100px 80px;
+  padding: 100px 0;
   text-align: center;
 }
-#introduce p {
-  font-size: 48px;
-  font-weight: 900;
+#introduce h2 {
   margin-bottom: 50px;
 }
 
 #boxWrap {
-  max-width: 1650px;
+  width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -340,16 +332,6 @@ body {
   padding: 30px;
   border-radius: 20px;
   transition: all 0.3s ease 0s;
-  /*     &::before {
-    display: none;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.5);
-  } */
 }
 #boxWrap .box .plusBtn,
 #boxWrap .box .textWrap > * {
@@ -409,15 +391,124 @@ body {
   left: 30px;
   bottom: 30px;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 #boxWrap .textHidden .strong {
   font-weight: 700;
   color: white;
 }
 
+#review {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#reviewSliderWrap {
+  width: 1270px;
+  height: 302px;
+  margin: 50px auto 0;
+  position: relative;
+}
+
+#reviewSlider {
+  width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+#reviewSlider .slide {
+  position: absolute;
+  z-index: 99;
+  width: 559px;
+  height: 100%;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: #f6f2ff;
+}
+#reviewSlider .slide:not(:last-child) {
+  margin-right: 20px;
+}
+#reviewSlider .slide .profileWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#reviewSlider .slide .profileWrap p {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.55px;
+  line-height: 33px;
+  color: #3e06b6;
+}
+#reviewSlider .slide .profileWrap img {
+  width: 70px;
+}
+#reviewSlider .slide .name {
+  font-size: 14px;
+  margin: 10px 0 16px;
+}
+#reviewSlider .slide .name span {
+  font-weight: bold;
+}
+#reviewSlider .slide .text {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  line-height: 18px;
+  color: #525252;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+#reviewSlider .slide .tags {
+  margin-top: 20px;
+  display: flex;
+}
+#reviewSlider .slide .tags li {
+  font-size: 10px;
+  background: white;
+  color: #525252;
+  margin-right: 5px;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+#reviewBtnWrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#reviewBtnWrap > div {
+  width: 40px;
+  cursor: pointer;
+}
+#reviewBtnWrap > div img {
+  display: block;
+  width: 100%;
+}
+#reviewBtnWrap #reviewPrevBtn {
+  transform: rotateY(180deg);
+}
+
 .gray {
   background-color: #f5f5f5;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 900;
+  margin-bottom: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

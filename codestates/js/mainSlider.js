@@ -1,5 +1,5 @@
 const slider = document.getElementById("mainSlider");
-const slides = document.querySelectorAll(".slide");
+const slides = slider.querySelectorAll(".slide");
 const currNum = document.querySelector(".currNum");
 const totalNum = document.querySelector(".totalNum");
 const prevBtn = document.getElementById("prevBtn");
