@@ -177,8 +177,6 @@ body {
 }
 
 #courseInfo {
-  padding: 100px 0;
-  box-sizing: border-box;
   text-align: center;
   letter-spacing: -0.025rem;
 }
@@ -189,7 +187,7 @@ body {
 
 #courseWrap {
   max-width: 1650px;
-  width: 820px;
+  width: 1230px;
   margin: 50px auto 0;
   display: flex;
   flex-wrap: wrap;
@@ -308,17 +306,9 @@ body {
   font-size: 16px;
 }
 
-#introduce {
-  padding: 100px 0;
-  text-align: center;
-}
-#introduce h2 {
-  margin-bottom: 50px;
-}
-
 #boxWrap {
   width: 1100px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -397,11 +387,6 @@ body {
 #boxWrap .textHidden .strong {
   font-weight: 700;
   color: white;
-}
-
-#review {
-  padding: 100px 0;
-  text-align: center;
 }
 
 #reviewSliderWrap {
@@ -504,8 +489,156 @@ body {
   transform: rotateY(180deg);
 }
 
-.gray {
-  background-color: #f5f5f5;
+#outcome {
+  text-align: center;
+  padding: 100px 0 50px;
+}
+#outcome .contentWrap {
+  opacity: 0;
+  position: relative;
+}
+#outcome .contentWrap.animated {
+  opacity: 1;
+  animation: comeUp 1s ease-in-out;
+}
+@keyframes comeUp {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+#outcome .iconWrap01 {
+  width: 380px;
+  margin-top: 50px;
+}
+#outcome .iconWrap02 {
+  width: 600px;
+}
+
+.iconWrap {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.iconWrap .icon .outcomeTitle {
+  font-size: 18px;
+}
+.iconWrap .icon .num {
+  font-size: 36px;
+  font-weight: 900;
+}
+.iconWrap .icon img {
+  margin-top: 20px;
+  height: 90px;
+}
+
+.outcomeText {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 40px 0 60px;
+}
+.outcomeText:last-child {
+  margin-top: 40px;
+}
+
+#company {
+  overflow: hidden;
+}
+#company #companySlider {
+  display: flex;
+  position: relative;
+  margin: 50px 0 10px;
+  animation: scroll 20s linear 0s infinite normal;
+}
+#company #companySlider li {
+  height: 30px;
+}
+#company #companySlider li:not(:last-child) {
+  margin-right: 50px;
+}
+#company #companySlider li img {
+  height: 30px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1820px);
+  }
+}
+#story {
+  padding: 120px 0;
+}
+
+#storyContainer {
+  width: 1250px;
+  height: 519px;
+  margin: 100px auto 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: green;
+}
+#storyContainer #storyNextBtn,
+#storyContainer #storyPrevBtn {
+  width: 40px;
+}
+#storyContainer #storyNextBtn img,
+#storyContainer #storyPrevBtn img {
+  display: block;
+  width: 100%;
+}
+#storyContainer #storyPrevBtn {
+  transform: rotate(180deg);
+}
+#storyContainer .slide {
+  width: 355px;
+  height: 220px;
+}
+#storyContainer .slide .date {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  color: #777;
+  margin-bottom: 10px;
+}
+#storyContainer .slide .storyWrap {
+  background-color: white;
+}
+#storyContainer .slide .storyWrap img {
+  width: 100%;
+}
+#storyContainer .slide .storyWrap .textWrap {
+  padding: 20px;
+}
+#storyContainer .slide .storyWrap .textWrap .storyTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+#storyContainer .slide .storyWrap .textWrap .storyContent {
+  font-size: 14px;
+}
+#storyContainer .slide .storyWrap .textWrap .readMore {
+  font-size: 12px;
+  font-weight: 700;
+}
+#storyContainer .slide .storyWrap .textWrap .readMore .circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  background-color: blue;
+}
+
+.section {
+  padding: 100px 0;
 }
 
 .sectionTitle {
@@ -513,6 +646,11 @@ body {
   line-height: 72px;
   font-weight: 900;
   margin-bottom: 12px;
+  text-align: center;
+}
+
+.gray {
+  background-color: #f5f5f5;
 }
 
 /*# sourceMappingURL=style.css.map */
