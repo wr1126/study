@@ -1,7 +1,7 @@
 const cards = document.querySelectorAll(".box");
-let cardNum;
-let clicked = false;
-let clickedCard;
+let cardNum,
+  clicked = false,
+  clickedCard;
 
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener("click", setCardNum);
@@ -42,9 +42,9 @@ function flipCard(target, cardNum) {
 }
 
 function showBack(target) {
-  const btn = target.querySelector(".plusBtn");
-  const text = target.querySelector(".textWrap");
-  const hiddenText = target.querySelector(".textHidden");
+  const btn = target.querySelector(".plusBtn"),
+    text = target.querySelector(".textWrap"),
+    hiddenText = target.querySelector(".textHidden");
 
   btn.innerText = "𝖷";
   btn.style.padding = "5px 10px";
@@ -56,10 +56,7 @@ function showBack(target) {
 }
 
 function showFront(target) {
-  let btn;
-  let text;
-  let hiddenText;
-  let bg;
+  let btn, text, hiddenText, bg;
 
   if (target.classList.contains("textHidden")) {
     btn = target.parentNode.querySelector(".plusBtn");
@@ -85,9 +82,9 @@ function showFront(target) {
 
 function reset() {
   for (let i = 0; i < cards.length; i++) {
-    const btn = cards[i].querySelector(".plusBtn");
-    const text = cards[i].querySelector(".textWrap");
-    const hiddenText = cards[i].querySelector(".textHidden");
+    const btn = cards[i].querySelector(".plusBtn"),
+      text = cards[i].querySelector(".textWrap"),
+      hiddenText = cards[i].querySelector(".textHidden");
 
     btn.innerText = "+ 더보기";
     btn.style.padding = "3px 12px";

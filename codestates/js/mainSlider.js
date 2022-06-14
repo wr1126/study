@@ -1,20 +1,20 @@
-const slider = document.getElementById("mainSlider");
-const slides = slider.querySelectorAll(".slide");
-const currNum = document.querySelector(".currNum");
-const totalNum = document.querySelector(".totalNum");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const pauseBtn = document.getElementById("pauseBtn");
-const pauseIcon = document.createElement("img");
+const slider = document.getElementById("mainSlider"),
+  slides = slider.querySelectorAll(".slide"),
+  currNum = document.querySelector(".currNum"),
+  totalNum = document.querySelector(".totalNum"),
+  prevBtn = document.getElementById("prevBtn"),
+  nextBtn = document.getElementById("nextBtn"),
+  pauseBtn = document.getElementById("pauseBtn"),
+  pauseIcon = document.createElement("img");
 pauseIcon.src = "img/pause.png";
 pauseBtn.appendChild(pauseIcon);
 
 //-(slideWidth * slides.length + slideMargin * slides.length) + 90
-const initialPos = -5510;
-const slideWidth = 1100;
-const slideMargin = 20;
-let slidePos = 0;
-let slideNum = 1;
+const initialPos = -5510,
+  slideWidth = 1100,
+  slideMargin = 20;
+let slidePos = 0,
+  slideNum = 1;
 
 //clone slides
 function cloneSlides() {

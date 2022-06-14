@@ -571,6 +571,7 @@ body {
     justify-content: space-between;
     #storyNextBtn,
     #storyPrevBtn {
+      cursor: pointer;
       width: 40px;
       align-self: center;
       img {
@@ -715,12 +716,3 @@ body {
     transform: translateX(-1820px);
   }
 }
-
-/* 
-    ** 할 것 **
-  1. story section slider 기능 완성
-  2. 배너, 푸터 완성
-  3. main slider, review slider transform으로 바꾸기
-  4. 반응형으로 제작하기
-  
-*/
