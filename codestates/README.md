@@ -1,4 +1,4 @@
-<h1> t-t-d✨ </h1>
+<h1> ✨ t-t-d </h1>
 
 - [x] story section slider 기능 완성
 - [x] 하단 배너, 푸터 완성
