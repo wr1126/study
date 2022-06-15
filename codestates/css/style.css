@@ -119,19 +119,19 @@ body {
   margin-right: 20px;
 }
 #sliderContainer #mainSlider .slide01 {
-  background-image: url(../img/banner01.png);
+  background-image: url(../img/mainSlider/banner01.png);
 }
 #sliderContainer #mainSlider .slide02 {
-  background-image: url(../img/banner02.png);
+  background-image: url(../img/mainSlider/banner02.png);
 }
 #sliderContainer #mainSlider .slide03 {
-  background-image: url(../img/banner03.png);
+  background-image: url(../img/mainSlider/banner03.png);
 }
 #sliderContainer #mainSlider .slide04 {
-  background-image: url(../img/banner04.png);
+  background-image: url(../img/mainSlider/banner04.png);
 }
 #sliderContainer #mainSlider .slide05 {
-  background-image: url(../img/banner05.png);
+  background-image: url(../img/mainSlider/banner05.png);
 }
 #sliderContainer #controller {
   position: absolute;
@@ -327,20 +327,20 @@ body {
   margin-top: 16px;
 }
 #introduce #boxWrap .box01 {
-  background-image: url(../img/benefit01.png);
+  background-image: url(../img/introduce/benefit01.png);
   width: 1100px;
 }
 #introduce #boxWrap .box02 {
-  background-image: url(../img/benefit02.png);
+  background-image: url(../img/introduce/benefit02.png);
 }
 #introduce #boxWrap .box03 {
-  background-image: url(../img/benefit03.png);
+  background-image: url(../img/introduce/benefit03.png);
 }
 #introduce #boxWrap .box04 {
-  background-image: url(../img/benefit04.png);
+  background-image: url(../img/introduce/benefit04.png);
 }
 #introduce #boxWrap .box05 {
-  background-image: url(../img/benefit05.png);
+  background-image: url(../img/introduce/benefit05.png);
 }
 #introduce #boxWrap .plusBtn {
   display: inline-block;
@@ -483,6 +483,7 @@ body {
   padding: 100px 0 50px;
 }
 #outcome .contentWrap {
+  margin-top: 50px;
   opacity: 0;
   position: relative;
 }
@@ -575,6 +576,7 @@ body {
   bottom: 59px;
   display: flex;
   flex-wrap: nowrap;
+  transition: 0.5s;
 }
 #story #storyContainer #storySliderContainer #storySlider .slide {
   cursor: pointer;
@@ -644,22 +646,129 @@ body {
   margin-right: 4px;
 }
 #story #storyContainer #storySliderContainer #storySlider .slide01 .imgWrap {
-  background-image: url(../img/story01.webp);
+  background-image: url(../img/story/story01.webp);
 }
 #story #storyContainer #storySliderContainer #storySlider .slide02 .imgWrap {
-  background-image: url(../img/story02.jpeg);
+  background-image: url(../img/story/story02.jpeg);
 }
 #story #storyContainer #storySliderContainer #storySlider .slide03 .imgWrap {
-  background-image: url(../img/story03.webp);
+  background-image: url(../img/story/story03.webp);
 }
 #story #storyContainer #storySliderContainer #storySlider .slide04 .imgWrap {
-  background-image: url(../img/story04.webp);
+  background-image: url(../img/story/story04.webp);
 }
 #story #storyContainer #storySliderContainer #storySlider .slide05 .imgWrap {
-  background-image: url(../img/story05.webp);
+  background-image: url(../img/story/story05.webp);
 }
 #story #storyContainer #storySliderContainer #storySlider .slide06 .imgWrap {
-  background-image: url(../img/story06.jpeg);
+  background-image: url(../img/story/story06.jpeg);
+}
+
+#banner {
+  width: 100%;
+  height: 406px;
+  background-image: url(../img/bottom_banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#banner .bannerWrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#banner .textWrap {
+  opacity: 0;
+}
+#banner .textWrap > * {
+  color: white;
+}
+#banner .textWrap p {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+#banner.animated .textWrap {
+  opacity: 1;
+  animation: comeUp 1s ease-in-out;
+}
+
+#footer {
+  background-color: #202b45;
+}
+#footer * {
+  color: white;
+}
+#footer > div {
+  width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #4d556b;
+}
+#footer .footer01 {
+  padding: 40px 0;
+  display: flex;
+}
+#footer .footer01 #fLogo {
+  width: 100px;
+  margin-right: 10px;
+}
+#footer .footer01 #fLogo img {
+  width: 100%;
+}
+#footer .footer02 {
+  padding: 35px 0 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#footer .footer02 .gTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+#footer .footer02 li {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px 0;
+}
+#footer .footer02 li a {
+  color: lightgray;
+}
+#footer .footer02 li a:hover {
+  text-decoration: underline;
+}
+#footer .footer02 .g04 .tel {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+#footer .footer02 .g04 .cs {
+  margin-top: 20px;
+}
+#footer .footer02 .g04 .cs a {
+  color: #ffa949;
+}
+#footer .footer03 {
+  padding: 30px 0 150px;
+  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+#footer .footer03 ul {
+  margin: 30px 0;
+  display: flex;
+  height: 16px;
+}
+#footer .footer03 ul li {
+  margin-right: 10px;
+}
+#footer .footer03 ul img {
+  height: 100%;
 }
 
 .section {

@@ -122,19 +122,19 @@ body {
       }
     }
     .slide01 {
-      background-image: url(../img/banner01.png);
+      background-image: url(../img/mainSlider/banner01.png);
     }
     .slide02 {
-      background-image: url(../img/banner02.png);
+      background-image: url(../img/mainSlider/banner02.png);
     }
     .slide03 {
-      background-image: url(../img/banner03.png);
+      background-image: url(../img/mainSlider/banner03.png);
     }
     .slide04 {
-      background-image: url(../img/banner04.png);
+      background-image: url(../img/mainSlider/banner04.png);
     }
     .slide05 {
-      background-image: url(../img/banner05.png);
+      background-image: url(../img/mainSlider/banner05.png);
     }
   }
   #controller {
@@ -335,20 +335,20 @@ body {
     }
 
     .box01 {
-      background-image: url(../img/benefit01.png);
+      background-image: url(../img/introduce/benefit01.png);
       width: 1100px;
     }
     .box02 {
-      background-image: url(../img/benefit02.png);
+      background-image: url(../img/introduce/benefit02.png);
     }
     .box03 {
-      background-image: url(../img/benefit03.png);
+      background-image: url(../img/introduce/benefit03.png);
     }
     .box04 {
-      background-image: url(../img/benefit04.png);
+      background-image: url(../img/introduce/benefit04.png);
     }
     .box05 {
-      background-image: url(../img/benefit05.png);
+      background-image: url(../img/introduce/benefit05.png);
     }
     .plusBtn {
       display: inline-block;
@@ -498,6 +498,7 @@ body {
   text-align: center;
   padding: 100px 0 50px;
   .contentWrap {
+    margin-top: 50px;
     opacity: 0;
     position: relative;
     &.animated {
@@ -593,6 +594,7 @@ body {
         bottom: 59px;
         display: flex;
         flex-wrap: nowrap;
+        transition: 0.5s;
         .slide {
           cursor: pointer;
           width: 355px;
@@ -662,23 +664,135 @@ body {
           }
         }
         .slide01 .imgWrap {
-          background-image: url(../img/story01.webp);
+          background-image: url(../img/story/story01.webp);
         }
         .slide02 .imgWrap {
-          background-image: url(../img/story02.jpeg);
+          background-image: url(../img/story/story02.jpeg);
         }
         .slide03 .imgWrap {
-          background-image: url(../img/story03.webp);
+          background-image: url(../img/story/story03.webp);
         }
         .slide04 .imgWrap {
-          background-image: url(../img/story04.webp);
+          background-image: url(../img/story/story04.webp);
         }
         .slide05 .imgWrap {
-          background-image: url(../img/story05.webp);
+          background-image: url(../img/story/story05.webp);
         }
         .slide06 .imgWrap {
-          background-image: url(../img/story06.jpeg);
+          background-image: url(../img/story/story06.jpeg);
         }
+      }
+    }
+  }
+}
+
+//banner
+#banner {
+  width: 100%;
+  height: 406px;
+  background-image: url(../img/bottom_banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  .bannerWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .textWrap {
+    opacity: 0;
+    & > * {
+      color: white;
+    }
+    p {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  &.animated .textWrap {
+    opacity: 1;
+    animation: comeUp 1s ease-in-out;
+  }
+}
+
+//footer
+#footer {
+  background-color: #202b45;
+  * {
+    color: white;
+  }
+  & > div {
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(77, 85, 107);
+  }
+  .footer01 {
+    padding: 40px 0;
+    display: flex;
+    #fLogo {
+      width: 100px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .footer02 {
+    padding: 35px 0 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .gTitle {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: white;
+    }
+    li {
+      cursor: pointer;
+      font-size: 15px;
+      padding: 6px 0;
+      a {
+        color: rgb(211, 211, 211);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .g04 {
+      .tel {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .cs {
+        margin-top: 20px;
+        a {
+          color: rgb(255, 169, 73);
+        }
+      }
+    }
+  }
+  .footer03 {
+    padding: 30px 0 150px;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    ul {
+      margin: 30px 0;
+      display: flex;
+      height: 16px;
+      li {
+        margin-right: 10px;
+      }
+      img {
+        height: 100%;
       }
     }
   }

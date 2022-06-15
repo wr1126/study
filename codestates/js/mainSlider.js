@@ -6,7 +6,7 @@ const slider = document.getElementById("mainSlider"),
   nextBtn = document.getElementById("nextBtn"),
   pauseBtn = document.getElementById("pauseBtn"),
   pauseIcon = document.createElement("img");
-pauseIcon.src = "img/pause.png";
+pauseIcon.src = "img/icon/pause.png";
 pauseBtn.appendChild(pauseIcon);
 
 //-(slideWidth * slides.length + slideMargin * slides.length) + 90
@@ -51,10 +51,10 @@ function pagination() {
 
 //pause/Play slide
 function pausePlaySlide() {
-  pauseIcon.src = "img/play.png";
+  pauseIcon.src = "img/icon/play.png";
   clearInterval(startAutoSlider);
   pauseBtn.addEventListener("click", () => {
-    pauseIcon.src = "img/pause.png";
+    pauseIcon.src = "img/icon/pause.png";
     let startAutoSlider = setInterval(autoSlider, 3000);
   });
 }
