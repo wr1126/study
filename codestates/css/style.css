@@ -107,6 +107,11 @@ body {
 #sliderContainer #mainSlider {
   position: absolute;
   display: flex;
+  left: 0;
+}
+#sliderContainer #mainSlider.animated {
+  transition-timing-function: ease;
+  transition: 1s;
 }
 #sliderContainer #mainSlider .slide {
   width: 1100px;
@@ -398,6 +403,9 @@ body {
   display: flex;
   text-align: left;
   height: 100%;
+}
+#review #reviewSliderContainer #reviewSlider.animated {
+  transition: 0.6s;
 }
 #review #reviewSliderContainer #reviewSlider .slide {
   width: 559px;

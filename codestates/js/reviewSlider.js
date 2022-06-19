@@ -26,6 +26,7 @@ function cloneReviewSlides() {
 //move slides with button
 function moveSlide(e) {
   if (e.target.parentNode.id === "reviewNextBtn") {
+    console.log(currPos);
     if (currPos < -2316) {
       reviewSlider.style.left = reviewInitialPos + "px";
       currPos = 0;

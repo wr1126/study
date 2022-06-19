@@ -31,7 +31,7 @@ function cloneSlides() {
 }
 
 //autoSlider
-let startAutoSlider = setInterval(autoSlider, 3000);
+let startAutoSlider = setInterval(autoSlider, 5000);
 function autoSlider() {
   if (slidePos < -3360) {
     slider.style.left = initialPos + "px";
