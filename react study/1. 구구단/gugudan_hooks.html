@@ -15,42 +15,25 @@
     ></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-      //class형은 잘 사용하지 않고 대신 함수형을 많이 사용하는 추세.
-      //setState, ref를 사용하지 않는 컴포넌트는 함수형으로 작성하면 짧고 간단해서 좋음.
-      //하지만 이제 함수형에서도 setState와 ref를 사용할 수 있게 해주었는데, 그게 바로 Hooks!
-      /* 기존 Class 방식 작성법
-          class GuGuDan extends React.Component {
-            this.state = {
-                first: Math.ceil(Math.random() * 9),
-                second: Math.ceil(Math.random() * 9),
-                value: "",
-                result: "",
-            };
-          }
-      */
       const GuGuDan = () => {
-        //state 선언 방식. class에서처럼 객체로 묶어줄 수는 없음. useState(초기값).
-        //useState 부분이 함수형에 setState 기능을 사용할 수 있도록 추가된 Hooks.
-        //무조건 컴포넌트 내부에 작성해야 함.
-        //각각의 변수마다 setter가 따로 있음.
-
-        //구조 분해(비구조화) 할당 방식으로 적어줌. -> 변수 자리에 객체 혹은 배열을 적는 것
         const [first, setFirst] = React.useState(Math.ceil(Math.random() * 9));
         const [second, setSecond] = React.useState(
           Math.ceil(Math.random() * 9)
         );
         const [value, setValue] = React.useState("");
         const [result, setResult] = React.useState("");
-        const inputRef = React.useRef(); //ref 쓰는 방식도 약간 달라짐.
 
-        //이벤트는 class가 아니라 메서드는 쓰지 못하지만 함수를 만들어 넣어주면 됨.
+        const inputRef = React.useRef();
+
         const onChange = (e) => {
-          setValue(e.target.value); //setState 대신 이제는 개별적으로 정의한 각각의 setter 사용.
+          setValue(e.target.value);
         };
         const onSubmit = (e) => {
           e.preventDefault();
           if (parseInt(value) === first * second) {
-            setResult("정답: " + value);
+            setResult((prevResult) => {
+              return "정답: " + value;
+            });
             setFirst(Math.ceil(Math.random() * 9));
             setSecond(Math.ceil(Math.random() * 9));
             setValue("");
