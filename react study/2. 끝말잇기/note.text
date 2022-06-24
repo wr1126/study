@@ -1,0 +1,37 @@
+//webpack
+컴포넌트가 많아지고 코드가 길어지는 경우 하나의 자바스크립트 파일로 통합하여
+불필요한 코드나 중복을 제거하고 관리를 수월하게 하는 기술
+실제 서비스에서는 필요 없음.
+
+1. 터미널에서 npm init 입력
+2. package.json 파일에서 리액트 개발에 필요한 모든 정보 확인 가능
+3. 터미널에 npm i react react-dom 을 입력하여 react, reactDom 설치
+4. npm i -D webpack webpack-cli 입력 
+-> package.json 파일에서 실제 서비스에서 쓰이는 것들은 dependencies에,
+   개발에서만 사용되는 것들은 devDependencies에 기록됨.
+5. webpack.config.js 파일 생성
+6. client.jsx 파일 생성: 이 파일이 실제로 화면의 요소를 그려낼 부분이므로 컴포넌트들에 대한 구체적인 정의는
+따로 분리하여 모듈화하고(WordRelay.jsx) 필요한 것들만 따로 연결하는 것이 좋음.
+-> 그러면 기존처럼 전체 파일을 모두 불러오는 것이 아니라, 필요한 블록, 모듈만 선택해서 불러올 수 있기 때문
+
+=> 이런 모든 작업들을 자동화해주는 것이 createReact app.
+   작동원리를 이해해야 하기 때문에 초반에는 createReact app을 사용하지 말고 직접 써볼 것.
+
+//js와 jsx 확장자의 차이
+반드시 jsx 확장자를 쓸 필요는 없으나, jsx 문법을 사용하는 경우에는 jsx 확장자를 사용하는 것이 좋음.
+jsx 확장자를 써주면 내부에 jsx 문법이 사용되고 있으며, 리액트 전용 파일이라는 정보를 주기 때문.
+
+7. jsx는 자바스크립트 문법이 아니기 때문에 
+npm i -D @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties
+npm i babel-loader 명령어를 통해 babel을 웹팩에도 추가해줘야 함.
+- babel/core: 기본적인 babel 최신 문법이 담김
+- babel/preset-env: 각 개발자의 환경에 따라 적절하게 바꿔줌.
+- babel/preset-react: react의 jsx를 변경해줌.
+- babel-loader: babel과 웹팩을 연결해줌.
+
+//핫 리로딩
+아주 작은 것을 변경하더라도 변경사항 적용을 위해 npx webpack으로 빌드를 해주어야 하는데, 자동으로 하는 법.
+1. npm i react-refresh @pmmmwh/react-refresh-webpack-plugin -D 으로 설치
+2. npm i -D webpack-dev-server 으로 개발용 dev server 설치
+3. package.json에서 scripts의 dev를 "webpack serve --env development" 로 바꿔줌.
+4. webpakck.config.js로 이동해서 마저 수정하기(번호 이어짐) 
