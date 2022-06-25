@@ -28,3 +28,10 @@ npm i babel-loader 명령어를 통해 babel을 웹팩에도 추가해줘야 함
 - babel/preset-env: 각 개발자의 환경에 따라 적절하게 바꿔줌.
 - babel/preset-react: react의 jsx를 변경해줌.
 - babel-loader: babel과 웹팩을 연결해줌.
+
+//핫 리로딩
+아주 작은 것을 변경하더라도 변경사항 적용을 위해 npx webpack으로 빌드를 해주어야 하는데, 자동으로 하는 법.
+1. npm i react-refresh @pmmmwh/react-refresh-webpack-plugin -D 으로 설치
+2. npm i -D webpack-dev-server 으로 개발용 dev server 설치
+3. package.json에서 scripts의 dev를 "webpack serve --env development" 로 바꿔줌.
+4. webpakck.config.js로 이동해서 마저 수정하기(번호 이어짐) 
