@@ -4,14 +4,14 @@ import { useState } from "react";
 //저렇게 구조분해 방식({})으로 작성할 수 있음.
 //맨 아래로 내려가기
 
-const Try = ({tryInfo}) => {
-  return(
+const Try = ({ tryInfo }) => {
+  return (
     <li>
       <div>{tryInfo.try}</div>
       <div>{tryInfo.result}</div>
     </li>
-  )
-}
+  );
+};
 
 const BullsNCows = () => {
   const [result, setResult] = useState(""); //결과를 알려주는 문구
@@ -89,15 +89,7 @@ const BullsNCows = () => {
         <input maxLength={4} value={value} onChange={onChange}></input>
       </form>
       <div>시도: {tries.length}</div>
-      <ul>
-        {
-          {tries.map(v, i) => {
-            return(
-              <Try key={`${i + 1}차 시도: `}>tryInfo={v}</Try>
-            )
-          }}
-        }
-      </ul>
+      <ul></ul>
     </>
   );
 };
