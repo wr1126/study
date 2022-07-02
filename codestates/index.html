@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codeStates</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script async src="js/app.js"></script>
+    <script async src="js/mainSlider.js"></script>
+    <script async src="js/introduce.js"></script>
+    <script async src="js/reviewSlider.js"></script>
+    <script async src="js/storySlider.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="headerWrap">
+        <div id="menu">
+          <div id="logo">
+            <img src="img/icon/logo.png" alt="코드스테이츠 로고" />
+          </div>
+          <ul>
+            <li id="about">
+              <a href="#" class="lavender">About</a>
+              <ul class="submenu">
+                <li><a href="#">졸업생 현황</a></li>
+                <li><a href="#">졸업생 커뮤니티</a></li>
+              </ul>
+            </li>
+            <li id="course">
+              <a href="#" class="lavender">코스 탐색</a>
+              <ul class="submenu">
+                <li><a href="#">프론트엔드 개발</a></li>
+                <li><a href="#">백엔드 개발</a></li>
+                <li><a href="#">프로덕트 매니지먼트</a></li>
+                <li><a href="#">그로스 마케팅</a></li>
+                <li><a href="#">인공 지능(AI)</a></li>
+                <li><a href="#">블록체인</a></li>
+                <li class="hr"><a href="#">데브옵스</a></li>
+                <li><a href="#">빗썸 테크 아카데미(FE & BE)</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="lavender">채용 파트너십</a></li>
+            <li><a href="#" class="lavender">기업교육</a></li>
+            <li><a href="#" class="lavender">블로그</a></li>
+            <li><a href="#" class="lavender">자주 묻는 질문</a></li>
+          </ul>
+        </div>
+        <div id="myPage">
+          <p class="lavender">마이페이지</p>
+        </div>
+      </div>
+    </section>
+    <section id="sliderContainer">
+      <div id="mainSlider">
+        <div class="slide slide01"></div>
+        <div class="slide slide02"></div>
+        <div class="slide slide03"></div>
+        <div class="slide slide04"></div>
+        <div class="slide slide05"></div>
+      </div>
+      <div id="controller">
+        <div id="numWrap">
+          <span class="currNum">01</span>
+          /
+          <span class="totalNum"></span>
+        </div>
+        <div id="btnWrap">
+          <div id="prevBtn">
+            <img src="img/icon/next.png" alt="show prev slide" />
+          </div>
+          <div id="nextBtn">
+            <img src="img/icon/next.png" alt="show next slide" />
+          </div>
+          <div id="pauseBtn"></div>
+        </div>
+      </div>
+    </section>
+    <section id="courseInfo" class="section">
+      <h2 class="sectionTitle">내게 맞는 코스를 찾아보세요</h2>
+      <p>
+        개발자부터 프로덕트 매니저, 마케터까지<br />
+        IT 취업에 특화된 부트캠프를 소개합니다.
+      </p>
+      <div id="courseWrap">
+        <div class="course">
+          <div class="status yet">모집 예정</div>
+          <h3 class="courseName">프론트엔드 엔지니어링</h3>
+          <p class="content">
+            문제 해결 능력을 갖춘 <br />
+            프론트엔트 개발자 양성 과정
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+        <div class="course">
+          <div class="status yet">모집 예정</div>
+          <h3 class="courseName">벡엔드 엔지니어링</h3>
+          <p class="content">
+            안정적인 웹 어플리케이션을 <br />
+            구축하는 백엔드 개발자 양성 과정
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+        <div class="course">
+          <div class="status">모집중</div>
+          <h3 class="courseName">프로덕트 매니지먼트</h3>
+          <p class="content">
+            문제 정의부터 서비스 출시까지 <br />
+            PM 실무 역량 강화
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+        <div class="course">
+          <div class="status">모집중</div>
+          <h3 class="courseName">그로스 마케팅</h3>
+          <p class="content">
+            데이터 드리븐으로 사고하는 <br />
+            대체불가 마케터 양성
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+        <div class="course">
+          <div class="status">모집중</div>
+          <h3 class="courseName">인공지능(AI)</h3>
+          <p class="content">
+            데이터 사이언스 입문을 위한 <br />
+            A to Z
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+        <div class="course">
+          <div class="status">모집중</div>
+          <h3 class="courseName">블록체인</h3>
+          <p class="content">
+            개인 능력에 <br />
+            블록체인 실무 능력을 더하세요
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+        <div class="course">
+          <div class="status yet">모집 예정</div>
+          <h3 class="courseName">데브옵스(DevOps)</h3>
+          <p class="content">
+            비전공자도 클라우드 서비스 개발은 <br />
+            물론 운영까지 한 번에
+          </p>
+          <div class="moreBtn">더 알아보기 👉</div>
+        </div>
+      </div>
+    </section>
+    <section id="introduce" class="gray section">
+      <h2 class="sectionTitle">직무 부트캠프, 왜 코드스테이츠일까요?</h2>
+      <div id="boxWrap">
+        <div class="box box01">
+          <div class="plusBtn">+ 더보기</div>
+          <div class="textWrap">
+            <div class="num">첫째</div>
+            <div class="introduce">
+              실무 역량을 빠르게 강화하는<br />
+              단기간 몰입형 부트캠프
+            </div>
+          </div>
+          <div class="textHidden" style="display: none">
+            코스별 3~7개월 동안의
+            <span class="strong">강도 높은 몰입형 교육</span>을 통해<br />
+            수강생의 <span class="strong">잠재력과 문제해결</span> 능력을<br />
+            최대한 끌어낼 수 있도록 돕습니다.<br /><br />
+            분야 별 전문가들의
+            <span class="strong"
+              >세션, 기업 협업프로젝트,<br />
+              페어 프로그래밍, 커리어 코칭</span
+            >
+            등 실무 역량 강화와<br />
+            취업에 특화된 체계적인 커리큘럼을 확인하세요.
+          </div>
+        </div>
+        <div class="box box02">
+          <div class="plusBtn">+ 더보기</div>
+          <div class="textWrap">
+            <div class="num">둘째</div>
+            <div class="introduce">
+              취업에 성공할 때까지,<br />
+              1:1 맞춤 코칭으로 밀착 지원
+            </div>
+          </div>
+          <div class="textHidden" style="display: none">
+            기업 채용담당자 출신의
+            <span class="strong">전문 커리어 코치들이</span><br />
+            <span class="strong">취업 준비의 전 과정을 지원</span>합니다.
+            이력서와 포트폴리오<br />
+            작성, 교육, 잡서칭, 모의면접 등
+            <span class="strong">1:1 맞춤 코칭</span>을 통해<br />
+            수강생이 역량을 발휘할 수 있는 회사를 함께 찾고<br />
+            고민합니다.<br /><br />
+            또한, 코드스테이츠에서는
+            <span class="strong">300여 개의 회사</span>와<br />
+            <span class="strong">채용 파트너십</span>을 맺고 맞춤 인재를
+            추천하고 있습니다.
+          </div>
+        </div>
+        <div class="box box03">
+          <div class="plusBtn">+ 더보기</div>
+          <div class="textWrap">
+            <div class="num">셋째</div>
+            <div class="introduce">
+              수료 후에도 끈끈하게 이어지는<br />
+              3,000+명의 알럼나이 커뮤니티
+            </div>
+          </div>
+          <div class="textHidden" style="display: none">
+            <span class="strong">코드스테이츠 수료생만 참여</span>할 수 있는
+            <span class="strong">알럼나이 채널</span>에서<br />
+            선후배 간 네트워킹을 통해
+            <span class="strong"
+              >실무 고민을 나누거나, 스터디,<br />
+              사이드 프로젝트</span
+            >를 진행해보세요.<br /><br />
+            수료생 커뮤니티 행사
+            <span class="strong">'ALUMNI NIGHT'</span>부터,<br />
+            <span class="strong">외부연사 초청 강연</span> 등 다양한
+            프로그램이<br />
+            준비되어 있습니다.
+          </div>
+        </div>
+        <div class="box box04">
+          <div class="plusBtn">+ 더보기</div>
+          <div class="textWrap">
+            <div class="num">넷째</div>
+            <div class="introduce">
+              선발 심사를 통과한<br />
+              탁월한 동료들과 협업해요
+            </div>
+          </div>
+          <div class="textHidden" style="display: none">
+            부트캠프를 지원하는 데
+            <span class="strong">전공, 학력, 성별, 나이</span>는<br />
+            <span class="strong">중요하지 않습니다.</span> 데이터 사이언티스트
+            및<br />
+            공공기관 선발 체계를 운영했던
+            <span class="strong"
+              >전문가들이 만든<br />
+              자체 선발 프로세스</span
+            >를 통해, 부트캠프에<br />
+            가장 적합한 <span class="strong">'최종 탑승자'</span>를
+            선발합니다.<br /><br />
+            함께 선발된
+            <span class="strong">탁월한 동료들과 협력</span>하며<br />
+            성장하는 즐거움을 느껴보세요.
+          </div>
+        </div>
+        <div class="box box05">
+          <div class="plusBtn">+ 더보기</div>
+          <div class="textWrap">
+            <div class="num">다섯째</div>
+            <div class="introduce">
+              실시간 온라인 학습으로<br />
+              환경의 제약 없이 배워요
+            </div>
+          </div>
+          <div class="textHidden" style="display: none">
+            코드스테이츠 부트캠프는
+            <span class="strong">원격학습으로 진행</span>되므로,<br />
+            지역 상관 없이 <span class="strong">어디에서나 수강</span>할 수
+            있습니다.<br /><br />
+            Zoom 등 화상 회의 도구를 활용해
+            <span class="strong"
+              >실시간으로 세션과<br />
+              발표, 그룹 프로젝트를 진행</span
+            >하고 궁금한 점은<br />
+            <span class="strong">온라인 Q&A 채널</span>에서 바로 답변 받을 수
+            있습니다.
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="review" class="section">
+      <h2 class="sectionTitle">
+        도전에 성공한 수료생들의 후기가 이어지고 있어요
+      </h2>
+      <div id="reviewSliderWrap">
+        <div id="reviewSliderContainer">
+          <div id="reviewSlider">
+            <div class="slide slide01">
+              <div class="profileWrap">
+                <p>가장 효율적인 방법으로 PM의<br />첫걸음을 시작했어요</p>
+                <img
+                  src="img/review/profile01.png"
+                  alt="user's profile picture"
+                />
+              </div>
+              <div class="name">
+                <span class="strong">장*윤</span> | 프로덕트 매니저
+              </div>
+              <p class="text">
+                개발 지식도, IT업계 경험도 전무했지만 직무 전환을 위해 퇴사와
+                동시에 PM 부트캠프에 참여했습니다. 프로덕트 관점으로 사고하고,
+                PM으로서 내가 가진 강점과 스스로 자기계발하는 방법을 알게 된
+                가치 있는 시간이었어요. 덕분에 가장 효율적인 방법으로 PM의
+                첫걸음을 시작하게 된 것 같습니다.
+              </p>
+              <ul class="tags">
+                <li>#프로덕트 매니지먼트 부트캠프</li>
+                <li>#8기</li>
+              </ul>
+            </div>
+            <div class="slide slide02">
+              <div class="profileWrap">
+                <p>블록체인의 개념과 기술을<br />체계적으로 배우고 싶다면</p>
+                <img
+                  src="img/review/profile02.png"
+                  alt="user's profile picture"
+                />
+              </div>
+              <div class="name">
+                <span class="strong">이*정</span> | 블록체인 부트캠프 수료생
+              </div>
+              <p class="text">
+                블록체인에 대해 말은 많지만, 블록체인의 개념과 기술을 체계적으로
+                배울 곳이 없었습니다. 그러다가 코드스테이츠 블록체인 부트캠프를
+                알게 됐습니다. 부트캠프에서는 단순히 블록체인 개념만 배우는 것이
+                아니라, 직접 블록체인 기술을 활용한 결과물까지 도출할 수 있어서
+                뜻 깊었습니다.
+              </p>
+              <ul class="tags">
+                <li>#블록체인 부트캠프</li>
+                <li>#1기</li>
+              </ul>
+            </div>
+            <div class="slide slide03">
+              <div class="profileWrap">
+                <p>마케팅에는 정답이 없고 해답이<br />있다는 걸 배웠습니다</p>
+                <img
+                  src="img/review/profile03.png"
+                  alt="user's profile picture"
+                />
+              </div>
+              <div class="name">
+                강*진<span class="strong"></span> | 데이터 분석가
+              </div>
+              <p class="text">
+                13주 간 끊임없는 과제와 팀 프로젝트를 통해 정답이 아닌 '데이터를
+                기반'으로 한 해답을 찾아나가는 방법을 배웠고, 동기들과
+                소통하면서 자연스럽게 비대면 커뮤니케이션 능력도 향상되었습니다.
+                중간 선배 세션 때, 마케터로서 일하는 자세에 대해 배운 덕분에
+                지금까지도 현업에서 많은 도움이 되고 있습니다.
+              </p>
+              <ul class="tags">
+                <li>#그로스 마케팅 부트캠프</li>
+                <li>#3기</li>
+              </ul>
+            </div>
+            <div class="slide slide04">
+              <div class="profileWrap">
+                <p>코드스테이츠는 물고기 잡는<br />방법을 알려주는 교육기관</p>
+                <img
+                  src="img/review/profile04.png"
+                  alt="user's profile picture"
+                />
+              </div>
+              <div class="name">
+                육*휘<span class="strong"></span> | 마인드로직 백엔드 개발자
+              </div>
+              <p class="text">
+                다른 사람이 코드를 짜주거나 문제를 해결하는 방법을 제시해주는 게
+                아니라, 어떻게 하면 그 문제를 잘 파악하고 해결 방법을 찾아볼 수
+                있는지를 알려주는 교육 방식이 좋았습니다. 코드스테이츠 덕분에
+                자신감을 많이 얻었고, MD에서 개발자로 커리어를 전환할 수
+                있었습니다.
+              </p>
+              <ul class="tags">
+                <li>#백엔드 개발 부트캠프</li>
+              </ul>
+            </div>
+            <div class="slide slide05">
+              <div class="profileWrap">
+                <p>
+                  당신의 배경을 판단하지 않고 공부<br />환경을 마련해드립니다
+                </p>
+                <img
+                  src="img/review/profile05.png"
+                  alt="user's profile picture"
+                />
+              </div>
+              <div class="name">
+                이*운<span class="strong"></span> | AI/Big Data 인턴
+              </div>
+              <p class="text">
+                AI 부트캠프는 수학을 잘 모르는 비전공자도 수료할 수 있어요. 음악
+                교육을 전공해서 데이터, 컴퓨터와는 동떨어진 삶을 살던 저도
+                전직에 성공했으니, 당연히 여러분도 할 수 있습니다.
+                비전공자에게는 힘든 과정이겠지만, 그 과정을 겪고나서 성장해있을
+                나를 생각한다면 충분히 시간을 투자해볼 만하다고 생각해요.
+              </p>
+              <ul class="tags">
+                <li>#인공지능 부트캠프</li>
+                <li>#2기</li>
+              </ul>
+            </div>
+            <div class="slide slide06">
+              <div class="profileWrap">
+                <p>엔지니어로서의 자아를 확립할 수<br />있었던 시간</p>
+                <img
+                  src="img/review/profile06.png"
+                  alt="user's profile picture"
+                />
+              </div>
+              <div class="name">
+                양*현<span class="strong"></span> | 샌드박스 네트워크 프론트엔드
+                개발자
+              </div>
+              <p class="text">
+                동료들과 같은 목표를 보고가면서, 엔지니어로서 어떤 마인드로 어떤
+                사고를 하고, 어떻게 문제를 해결해야 하는지 배웠습니다. 사실
+                문제를 해결하는 코드는 동일할지라도 접근 방법은 다 다르거든요.
+                동료들과 서로 문제 해결 방법을 공유하는 과정을 거치면서 저
+                자신의 엔지니어적인 자아를 확립할 수 있었어요.
+              </p>
+              <ul class="tags">
+                <li>#프론트엔드 개발 부트캠프</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="reviewBtnWrap">
+          <div id="reviewPrevBtn">
+            <img src="img/icon/next_arrow.png" alt="show prev reviews button" />
+          </div>
+          <div id="reviewNextBtn">
+            <img src="img/icon/next_arrow.png" alt="show prev reviews button" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="outcome" class="gray section">
+      <h2 class="sectionTitle">함께한 수료생 현황을 투명하게 공개합니다</h2>
+      <div class="contentWrap">
+        <div class="iconWrap iconWrap01">
+          <div class="icon icon01">
+            <p class="outcomeTitle">누적 수강생</p>
+            <div class="num">6,700명</div>
+            <img src="img/outcome/outcome01.png" alt="outcome image" />
+          </div>
+          <div class="icon icon02">
+            <p class="outcomeTitle">IT 비전공자 비율</p>
+            <div class="num">75%</div>
+            <img src="img/outcome/outcome02.png" alt="outcome image" />
+          </div>
+        </div>
+        <p class="outcomeText">
+          이미 수많은 분들이 코드스테이츠를 선택하고 있습니다.<br />
+          수강생 중 75%가 비전공자 출신으로 의지만 있다면 누구나 도전할 수
+          있습니다.
+        </p>
+        <div class="iconWrap iconWrap02">
+          <div class="icon icon03">
+            <p class="outcomeTitle">누적 취업률</p>
+            <div class="num">83%</div>
+            <img src="img/outcome/outcome03.png" alt="outcome image" />
+          </div>
+          <div class="icon icon04">
+            <p class="outcomeTitle">평균 구직 기간</p>
+            <div class="num">12주</div>
+            <img src="img/outcome/outcome04.png" alt="outcome image" />
+          </div>
+          <div class="icon icon05">
+            <p class="outcomeTitle">평균 연봉</p>
+            <div class="num">3,300만원</div>
+            <img src="img/outcome/outcome05.png" alt="outcome image" />
+          </div>
+        </div>
+        <p class="outcomeText">
+          수료생의 83%가 소프트웨어 엔지니어, 데이터 사이언티스트,<br />
+          프로덕트 매니저, 그로스 마케터 등으로 취업에 성공하고 있습니다.
+        </p>
+      </div>
+    </section>
+    <section id="company" class="section">
+      <h2 class="sectionTitle">수료생들이 취업한 기업들</h2>
+      <ul id="companySlider">
+        <li><img src="img/company/company01.png" alt="company logo" /></li>
+        <li><img src="img/company/company02.png" alt="company logo" /></li>
+        <li><img src="img/company/company03.png" alt="company logo" /></li>
+        <li><img src="img/company/company04.png" alt="company logo" /></li>
+        <li><img src="img/company/company05.png" alt="company logo" /></li>
+        <li><img src="img/company/company06.png" alt="company logo" /></li>
+        <li><img src="img/company/company07.png" alt="company logo" /></li>
+        <li><img src="img/company/company08.png" alt="company logo" /></li>
+        <li><img src="img/company/company09.png" alt="company logo" /></li>
+        <li><img src="img/company/company10.png" alt="company logo" /></li>
+        <li><img src="img/company/company01.png" alt="company logo" /></li>
+        <li><img src="img/company/company02.png" alt="company logo" /></li>
+        <li><img src="img/company/company03.png" alt="company logo" /></li>
+        <li><img src="img/company/company04.png" alt="company logo" /></li>
+        <li><img src="img/company/company05.png" alt="company logo" /></li>
+        <li><img src="img/company/company06.png" alt="company logo" /></li>
+        <li><img src="img/company/company07.png" alt="company logo" /></li>
+        <li><img src="img/company/company08.png" alt="company logo" /></li>
+        <li><img src="img/company/company09.png" alt="company logo" /></li>
+        <li><img src="img/company/company10.png" alt="company logo" /></li>
+      </ul>
+    </section>
+    <section id="story" class="gray section">
+      <h2 class="sectionTitle">코드스테이츠 STORY</h2>
+      <div id="storyContainer">
+        <div id="storyPrevBtn">
+          <img src="img/icon/next_arrow.png" alt="previous button" />
+        </div>
+        <div id="storySliderContainer">
+          <div id="storySlider">
+            <div class="slide slide01">
+              <div class="date">2022. 05. 27</div>
+              <div class="storyWrap">
+                <div class="imgWrap"></div>
+                <div class="textWrap">
+                  <div class="storyTitle">
+                    "임베디드 개발자에서 블록체인<br />개발자로 커리어를
+                    전환했어요."
+                  </div>
+                  <p class="storyContent">
+                    금융 관련 플랫폼 블록체인 개발자로 일하고 있는 블록체인
+                    부트캠프 1기 수료생 지상범님의 이야기입니다.
+                  </p>
+                  <div class="readMore">
+                    <span class="circle"></span>READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide02">
+              <div class="date">2022. 05. 17</div>
+              <div class="storyWrap">
+                <div class="imgWrap"></div>
+                <div class="textWrap">
+                  <div class="storyTitle">
+                    IT 인재양성 ‘부트캠프’ 지원자, 1년새 3배 증가… “디지털 인력
+                    품귀”
+                  </div>
+                  <p class="storyContent">
+                    디지털 인재 수요가 꾸준히 증가하는 가운데 정보기술(IT)
+                    인재양성 '부트캠프' 지원자가 1년 만에 약 3배 증가한 것으로
+                    나타났다. IT 인재양성 스타트업 코드스테이츠는 지난해 △SW
+                    엔지니어링
+                  </p>
+                  <div class="readMore">
+                    <span class="circle"></span>READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide03">
+              <div class="date">2022. 05. 03</div>
+              <div class="storyWrap">
+                <div class="imgWrap"></div>
+                <div class="textWrap">
+                  <div class="storyTitle">
+                    스타트업 PM, 서비스 기획자가 하는 일은?ㅣ런드리고 허윤희님
+                  </div>
+                  <p class="storyContent">
+                    IT 업계나 스타트업에서 서비스 기획자, PM이 무슨 일을 하는지
+                    막연하게만 알고 계신 분들이 많으실 것 같은데요.
+                  </p>
+                  <div class="readMore">
+                    <span class="circle"></span>READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide04">
+              <div class="date">2022. 04. 26</div>
+              <div class="storyWrap">
+                <div class="imgWrap"></div>
+                <div class="textWrap">
+                  <div class="storyTitle">
+                    코드스테이츠 DevOps 데브옵스 부트캠프 이모저모 1편
+                  </div>
+                  <p class="storyContent">
+                    코드스테이츠의 새로운 부트캠프, 데브옵스 DevOps 부트캠프
+                    프로젝트 진행 현장을 생생하게 담았습니다.
+                  </p>
+                  <div class="readMore">
+                    <span class="circle"></span>READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide05">
+              <div class="date">2022. 04. 07</div>
+              <div class="storyWrap">
+                <div class="imgWrap"></div>
+                <div class="textWrap">
+                  <div class="storyTitle">
+                    “사람들이 쉽게 사용하는 블록체인 플랫폼을 만들고 싶어요.”
+                  </div>
+                  <p class="storyContent">
+                    컴퓨터 공학을 전공하며 어떤 개발자가 되어야 할지 고민하다가
+                    블록체인 부트캠프를 찾은 1기 수료생 이민정 님을 만났습니다.
+                  </p>
+                  <div class="readMore">
+                    <span class="circle"></span>READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide slide06">
+              <div class="date">2022. 03. 31</div>
+              <div class="storyWrap">
+                <div class="imgWrap"></div>
+                <div class="textWrap">
+                  <div class="storyTitle">
+                    코드스테이츠, ‘스테이츠 다오’ 정식 론칭
+                  </div>
+                  <p class="storyContent">
+                    IT 인재양성 스타트업 코드스테이츠가 커리어 플랫폼 ‘스테이츠
+                    다오(States DAO)’를 정식 출범한다. 스테이츠 다오는
+                    웹3.0(Web3.0) 프로젝트
+                  </p>
+                  <div class="readMore">
+                    <span class="circle"></span>READ MORE
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="storyNextBtn">
+          <img src="img/icon/next_arrow.png" alt="next button" />
+        </div>
+      </div>
+    </section>
+    <section id="banner" class="">
+      <div class="bannerWrap section">
+        <div class="textWrap">
+          <h2 class="sectionTitle">
+            꿈꾸는 커리어의 시작,<br />
+            코드스테이츠와 함께 하세요
+          </h2>
+          <p>수강생의 성공이 코드스테이츠의 성공입니다</p>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="footer01">
+        <div id="fLogo">
+          <img src="img/footer/footerLogo.png" alt="codestates logo" />
+        </div>
+        <p>Education for the real world</p>
+      </div>
+      <div class="footer02">
+        <div class="g01">
+          <ul>
+            <li class="gTitle">About</li>
+            <li><a href="#">졸업생 현황</a></li>
+            <li><a href="#">채용 파트너십</a></li>
+            <li><a href="#">기업교육</a></li>
+            <li><a href="#">블로그</a></li>
+          </ul>
+        </div>
+        <div class="g02">
+          <ul>
+            <li class="gTitle">코드스테이츠</li>
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">채용 공고</a></li>
+          </ul>
+        </div>
+        <div class="g03">
+          <ul>
+            <li class="gTitle">코스 탐색</li>
+            <li><a href="#">Frontend Engineering</a></li>
+            <li><a href="#">Backend Engineering</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Growth Marketing</a></li>
+            <li><a href="#">Artificial Intelligence</a></li>
+            <li><a href="#">Blockchain</a></li>
+            <li><a href="#">DevOps</a></li>
+          </ul>
+        </div>
+        <div class="g04">
+          <div class="gTitle">수강 문의</div>
+          <div class="tel">1670-5997</div>
+          <div class="time">
+            운영 시간:평일 10:00-18:00<br />
+            점심 시간:평일 13:00-14:00<br />
+            주말, 공휴일 휴무
+          </div>
+          <ul class="cs">
+            <li><a href="#"> 1:1 채팅 상담은 여기를 눌러주세요! </a></li>
+            <li><a href="#"> 이메일 문의는 여기를 눌러주세요! </a></li>
+            <li><a href="#"> 자주 묻는 질문 바로가기 </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer03">
+        <div class="iconWrap">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="img/footer/facebook.png" alt="facebook icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/footer/instagram.png" alt="instagram icon"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/footer/blog.png" alt="blog icon" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/footer/mail.png" alt="mail icon" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="img/footer/youtube.png" alt="youtube icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="companyInfo">
+          Copyright @ 2020 Code States<br />
+          상호명: 주식회사 코드스테이츠 | 사업자번호: 703-88-00878 | 대표자명:
+          김인기<br />
+          사업장주소: 서울특별시 서초구 서초대로 396, 강남빌딩 20층
+          (스파크플러스 강남2호점)<br />
+          구글 크롬에 최적화 되어있습니다.
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#slider {
+  width: 1500vw;
+  height: 100%;
+  position: absolute;
+}
+
+.slide {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  opacity: 0;
+}
+.one {
+  background-color: #e66772;
+}
+.two {
+  background-color: #f29a57;
+}
+.three {
+  background-color: #d3cc68;
+}
+.four {
+  background-color: #0fa66e;
+}
+.five {
+  background-color: #1b57a6;
+}
+
+#btnWrap {
+  & > span {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    background-color: rgba($color: white, $alpha: 0.3);
+    padding: 10px 10px 5px;
+    border-radius: 100px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    &:hover {
+      background-color: rgba($color: white, $alpha: 1);
+    }
+  }
+  .prev {
+    left: 50px;
+  }
+  .next {
+    right: 50px;
+  }
+}
+
+#pager {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pager {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
