@@ -1,0 +1,12 @@
+body {
+  padding: 100px;
+}
+button {
+  padding: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.clickedBtn {
+  background-color: black;
+  color: white;
+}

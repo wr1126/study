@@ -1,11 +1,27 @@
 import "./App.css";
-import styled from "styled-components";
+//import styled from "styled-components";
 import { useState } from "react";
 
 function App() {
-  const [clicked, setClicked] = useState("false");
+  const [clicked, setClicked] = useState("버튼");
 
-  const Button = styled.button`
+  const onClick = () => {
+    if (clicked === "버튼") {
+      setClicked("클릭");
+    } else {
+      setClicked("버튼");
+    }
+  };
+
+  const ToggleBtn = () => {
+    return (
+      <button id="toggle" onClick={onClick}>
+        {clicked}
+      </button>
+    );
+  };
+
+  /* const Button = styled.button`
     cursor: pointer;
     border: none;
     width: 100px;
@@ -17,16 +33,10 @@ function App() {
       color: white;
     }
   `;
-
+ */
   return (
     <div className="App">
-      <button>얍</button>
-      <Button className={clicked ? "active" : ""} onClick={setClicked("true")}>
-        버튼1
-      </Button>
-      <Button className={clicked ? "active" : ""} onClick={setClicked("true")}>
-        버튼2
-      </Button>
+      <ToggleBtn></ToggleBtn>
     </div>
   );
 }

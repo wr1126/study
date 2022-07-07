@@ -1,0 +1,8 @@
+body {
+  padding: 50px;
+}
+#toggle {
+  width: 100px;
+  height: 80px;
+  font-size: 30px;
+}
