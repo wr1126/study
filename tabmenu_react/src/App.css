@@ -32,11 +32,7 @@ body {
   cursor: pointer;
   display: inline-block;
 }
-/* .tabName:hover {
-  background-color: black;
-  color: white;
-} */
-.tabName:active {
+.tabName.active {
   background-color: black;
   color: white;
 }
