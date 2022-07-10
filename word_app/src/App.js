@@ -1,8 +1,10 @@
 import Header from "./component/Header";
 import DayList from "./component/DayList";
 import Day from "./component/Day";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import CreateWord from "./component/CreateWord";
+import CreateDay from "./component/CreateDay";
 import EmptyPage from "./component/EmptyPage";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
           <Route path="/day/:day">
             {/* url에 있는 값을 사용하기 위해 dayNum 변수로 url의 값(day)을 받아옴 */}
             <Day />
+          </Route>
+          <Route path="/create_word">
+            <CreateWord />
+          </Route>
+          <Route path="/create_day">
+            <CreateDay />
           </Route>
           <Route>
             {/* 앞에 있는 Route의 조건들에 모두 부합하지 않으면 가장 마지막의 이 페이지가 보여지게 됨. 따라서 가장 마지막에 위치해야 함. */}

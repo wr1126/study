@@ -14,7 +14,7 @@ export default function Word({ word: w }) {
   function toggleDone() {
     //체크 상태 업데이트 함수
     fetch(`http://localhost:3001/words/${word.id}`, {
-      method: "put",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         //보내는 데이터의 타입. update이니까 이쪽에서 보내는 데이터가 존재할 것이므로 이에 대한 정보를 지정해줘야 함.
@@ -34,7 +34,7 @@ export default function Word({ word: w }) {
     //두번째 인자로 객체를 넣으면 요청의 옵션들을 지정할 수 있음. 어떤 종류의 요청을 할 것인지 등등
   }
   function del() {
-    //단어 삭제 함수
+    //단어 삭제 함수. 실제 db 파일에 들어가 확인해봐도 반영됨.
     if (window.confirm("삭제하시겠습니까?")) {
       fetch(`http://localhost:3001/words/${word.id}`, {
         method: "DELETE",
